@@ -1,0 +1,24 @@
+# ============================================================
+# Datos — Ejercicio 3 BAC SSC SWIFT
+# ============================================================
+
+set ANALISTAS := A B C D E;
+set OPERACIONES := MT103 MT202 MT700 MT760 MT940;
+
+# Tiempos en minutos (M = celda bloqueada, usar 0 porque disponible=0 la excluye)
+param tiempo :
+            MT103  MT202  MT700  MT760  MT940 :=
+    A         25     30      0      0     20
+    B         35     28     40     45     22
+    C         40     45     35     30     25
+    D         30     32     50      0     18
+    E          0      0     30     28     30 ;
+
+# Disponibilidad: 1 = puede tomar la operación, 0 = bloqueado por Bridger
+param disponible :
+            MT103  MT202  MT700  MT760  MT940 :=
+    A         1      1      0      0      1
+    B         1      1      1      1      1
+    C         1      1      1      1      1
+    D         1      1      1      0      1
+    E         0      0      1      1      1 ;
